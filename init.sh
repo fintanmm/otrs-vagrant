@@ -1,7 +1,7 @@
 VERSION="6.0.6" # OTRS
-
-mkdir -p /data/www/otrs
 INSTALL_DIR=/data/www/otrs
+
+mkdir -p $INSTALL_DIR
 yum install -y wget
 yum install -y lsof
 yum install -y vim

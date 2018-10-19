@@ -48,7 +48,7 @@ sub Load {
     # if you want to use a local socket connection
 #    $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};";
     # if you want to use a TCP/IP connection
-   $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};host=$Self->{DatabaseHost};";
+    $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};host=$Self->{DatabaseHost};";
 
     # The database DSN for Microsoft SQL Server - only supported if OTRS is
     # installed on Windows as well
