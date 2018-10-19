@@ -6,11 +6,11 @@ sudo chmod 770 $INSTALL_DIR/Kernel/Config.pm
 
 echo "Installing database..."
 cd /tmp
-wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+wget https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-3.noarch.rpm
+sudo rpm -ivh pgdg-centos95-9.5-3.noarch.rpm
 sudo yum -y update
-sudo yum install -y mysql-community-server.x86_64
-sudo systemctl start mysqld
+sudo yum install -y pgdg-centos95-9.5-3
+sudo systemctl start postgresql
 
 mysql --user=root <<_EOF_
 UPDATE mysql.user SET Password=PASSWORD('otrs-ioa') WHERE User='root';
