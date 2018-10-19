@@ -39,7 +39,7 @@ yum install -y "perl(DateTime)"
 yum install -y "perl(Net::DNS)"
 yum install -y "perl(Encode::HanExtra)"
 yum install -y "perl(YAML::XS)"
-yum install -y "perl(DBD::mysql)"
+yum install -y "perl(DBD::Pg)"
 yum -y install gcc make "perl(CPAN)"
 yum -y install "perl(Sys::Syslog)"
 yum -y install mod_ssl openssl
