@@ -70,6 +70,7 @@ sudo $INSTALL_DIR/bin/otrs.SetPermissions.pl
 
 echo "HTTPD Config..."
 sudo cp $INSTALL_DIR/scripts/apache2-httpd.include.conf /etc/httpd/conf.d/otrs.conf
+sudo sed -i 's/opt\/otrs/data\/\www\/otrs/g' /etc/httpd/conf.d/otrs.conf
 sudo systemctl enable httpd
 sudo systemctl restart httpd
 
