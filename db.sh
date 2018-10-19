@@ -9,8 +9,11 @@ cd /tmp
 wget https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-3.noarch.rpm
 sudo rpm -ivh pgdg-centos95-9.5-3.noarch.rpm
 sudo yum -y update
-sudo yum install -y pgdg-centos95-9.5-3
+sudo yum install -y postgresql95-server.x86_64
 sudo systemctl start postgresql
+
+su -c "createuser otrs" -s /bin/bash postgres
+su -c "createdb otrs -O otrs" -s /bin/bash postgres
 
 mysql --user=root <<_EOF_
 UPDATE mysql.user SET Password=PASSWORD('otrs-ioa') WHERE User='root';
