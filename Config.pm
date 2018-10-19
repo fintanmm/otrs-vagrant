@@ -42,13 +42,13 @@ sub Load {
     $Self->{'DatabasePw'} = 'otrs-ioa';
 
     # The database DSN for MySQL ==> more: "perldoc DBD::mysql"
-    $Self->{'DatabaseDSN'} = "DBI:mysql:database=$Self->{Database};host=$Self->{DatabaseHost}";
+    # $Self->{'DatabaseDSN'} = "DBI:mysql:database=$Self->{Database};host=$Self->{DatabaseHost}";
 
     # The database DSN for PostgreSQL ==> more: "perldoc DBD::Pg"
     # if you want to use a local socket connection
 #    $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};";
     # if you want to use a TCP/IP connection
-#    $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};host=$Self->{DatabaseHost};";
+   $Self->{DatabaseDSN} = "DBI:Pg:dbname=$Self->{Database};host=$Self->{DatabaseHost};";
 
     # The database DSN for Microsoft SQL Server - only supported if OTRS is
     # installed on Windows as well
