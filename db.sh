@@ -10,7 +10,7 @@ wget https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg
 sudo rpm -ivh pgdg-centos95-9.5-3.noarch.rpm
 sudo yum -y update
 sudo yum install -y postgresql95-server.x86_64
-su -c " /usr/pgsql-9.5/bin/initdb" -s /bin/bash postgres
+su -c " /usr/pgsql-9.5/bin/initdb -D /var/lib/pgsql/9.5/data" -s /bin/bash postgres
 sudo systemctl start postgresql-9.5.service
 sudo systemctl enable postgresql-9.5.service
 
