@@ -8,6 +8,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "centos/7"
   config.vm.network "forwarded_port", guest: 80, host: 3002, protocol: 'tcp'
   config.ssh.insert_key = false
+
+  config.vm.provision "file",
+  source: 'share/otrs.sql',
+  destination: "/tmp/otrs.sql"
+
   config.vm.provision "file",
     source: 'Config.pm',
     destination: "Config.pm"
