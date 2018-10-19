@@ -15,5 +15,5 @@ sudo systemctl start postgresql-9.5.service
 sudo systemctl enable postgresql-9.5.service
 
 su -c "createuser otrs" -s /bin/bash postgres
-su -c "echo \"alter user otrs with encrypted password 'otrs-ioa';\"|psql "
+su -c "echo \"alter user otrs with encrypted password 'otrs-ioa';\"|psql " -s /bin/bash postgres
 su -c "createdb otrs -O otrs" -s /bin/bash postgres
