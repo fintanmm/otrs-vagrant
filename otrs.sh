@@ -1,4 +1,4 @@
-# VERSION="6.0.6" # OTRS
+VERSION="6.0.6" # OTRS
 # INSTALL_DIR="/data/www/otrs-$VERSION"
 echo "installing requirements for make"
 yum install -y lndir
@@ -16,6 +16,12 @@ sudo cp config.pl /opt/module-tools/etc
 
 # su -c "$INSTALL_DIR/bin/otrs.Daemon.pl start" -s /bin/bash otrs
 su -c "/opt/otrs/bin/otrs.Daemon.pl start" -s /bin/bash otrs
+su -c "wget http://ftp.otrs.org/pub/otrs/itsm/packages6/GeneralCatalog-$VERSION.opm -O /tmp/GeneralCatalog-$VERSION.opm" -s /bin/bash otrs
+su -c "wget http://ftp.otrs.org/pub/otrs/itsm/packages6/ITSMCore-$VERSION.opm -O /tmp/ITSMCore-$VERSION.opm" -s /bin/bash otrs
+su -c "wget http://ftp.otrs.org/pub/otrs/itsm/packages6/ITSMChangeManagement-$VERSION.opm -O /tmp/ITSMChangeManagement-$VERSION.opm" -s /bin/bash otrs
+su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install /tmp/GeneralCatalog-$VERSION.opm" -s /bin/bash otrs
+su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install /tmp/ITSMCore-$VERSION.opm" -s /bin/bash otrs
+su -c "/opt/otrs/bin/otrs.Console.pl Admin::Package::Install /tmp/ITSMChangeManagement-$VERSION.opm" -s /bin/bash otrs
 
 
 # echo "go to: http://localhost:3002/otrs/installer.pl"
