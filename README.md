@@ -1,7 +1,7 @@
 vagrant-otrs
 ============
 
-Vagrant Box with OTRS 6.6 centos/7 
+Vagrant Box with OTRS 6.6 centos/7. Restores existing db.
 
 fork of git@github.com:mark3l/otrs-vagrant.git
 
