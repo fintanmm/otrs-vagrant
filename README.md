@@ -3,7 +3,9 @@ vagrant-otrs
 
 Vagrant Box with OTRS 6.6 centos/7 
 
-git clone git@github.com:mark3l/otrs-vagrant.git
+fork of git@github.com:mark3l/otrs-vagrant.git
+
+git clone git@github.com:fintanmm/otrs-vagrant.git
 cd otrs-vagrant
 
 1. Run "vagrant up" (If you have an old installation, run "vagrant destroy" previously)
