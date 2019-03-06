@@ -1,4 +1,9 @@
-VERSION="6.0.6" # OTRS
+VERSION="6.0.16" # OTRS
+
+cd /tmp
+wget –q "http://ftp.otrs.org/pub/otrs/otrs-$VERSION.tar.bz2" -O "./otrs-$VERSION.tar.bz2" #> /dev/null
+echo "extract otrs..."
+sudo tar xjf otrs-$VERSION.tar.bz2 --strip 1 -C /opt/otrs
 # INSTALL_DIR="/data/www/otrs-$VERSION"
 echo "installing requirements for make"
 yum install -y lndir
