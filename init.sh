@@ -1,4 +1,4 @@
-VERSION="6.0.6" # OTRS
+VERSION="6.0.16" # OTRS
 # INSTALL_DIR="/data/www/otrs-$VERSION"
 
 sudo mkdir -p /opt/otrs /data/www

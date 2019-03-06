@@ -1,4 +1,4 @@
-VERSION="6.0.6" # OTR
+VERSION="6.0.16" # OTR
 echo "Copying config file"
 sudo mv Config.pm /opt/otrs/Kernel/Config.pm
 sudo chown otrs:apache /opt/otrs/Kernel/Config.pm
