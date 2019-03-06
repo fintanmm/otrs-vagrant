@@ -75,7 +75,7 @@ sudo perl /opt/otrs/bin/otrs.CheckModules.pl
 sudo perl -cw /opt/otrs/bin/cgi-bin/index.pl
 sudo perl -cw /opt/otrs/bin/cgi-bin/customer.pl
 sudo perl -cw /opt/otrs/bin/otrs.SetPermissions.pl
-sudo /opt/otrs/bin/otrs.SetPermissions.pl --web-group=apache
+sudo /opt/otrs/bin/otrs.SetPermissions.pl  --otrs-user=otrs --web-group=apache
 
 echo "HTTPD Config..."
 sudo cp /opt/otrs/scripts/apache2-httpd.include.conf /etc/httpd/conf.d/otrs.conf
