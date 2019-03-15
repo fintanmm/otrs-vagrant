@@ -18,6 +18,7 @@ else
     yum install perl-App-cpanminus.noarch
     yum install -y "perl(Crypt::Eksblowfish::Bcrypt)"
     yum install  -y "perl(Crypt::SSLeay)"
+    yum install -y "perl(Time::Piece)"
     yum install -y "perl(DBD::Pg)"
     yum install -y "perl(Encode::HanExtra)"
     yum install -y "perl(IO::Socket::SSL)"
